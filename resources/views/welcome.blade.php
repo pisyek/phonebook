@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    My Simple Phonebook App using Laravel
                 </div>
                 
                 <div class="links">
