@@ -5,6 +5,6 @@ Simple phonebook project using Laravel + Laragon + VS Code
 ## Function
 
 TODO: 
-1. User login/register
-2. Admin panel
+<strike>1. User login/register</strike>
+<strike>2. Admin panel</strike>
 3. Contact Management - CRUD
