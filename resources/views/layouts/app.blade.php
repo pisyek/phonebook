@@ -12,7 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -92,5 +93,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    
 </body>
 </html>
