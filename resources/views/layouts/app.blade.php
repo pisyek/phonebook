@@ -96,5 +96,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
     
+    @yield('js')
+    
 </body>
 </html>

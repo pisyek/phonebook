@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Dashboard > Contacts</div>
 
                 <div class="panel-body">
-                    <table id="contact">
+                    <table id="contacts-table" class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -23,4 +23,19 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script>
+$('#contacts-table').DataTable( {
+    ajax: {
+        url: 'datatables/contacts',
+        dataSrc: ''
+    },
+    columns: [
+        { data: 'name' },
+        { data: 'phone_no' },
+    ]
+} );
+</script>
 @endsection
