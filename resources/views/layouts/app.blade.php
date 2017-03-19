@@ -59,7 +59,7 @@
                                     Manage Contact <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                     <li><a href="{{ route('contacts') }}">View All</a></li>
+                                     <li><a href="{{ route('contacts.index') }}">View All</a></li>
                                      <li><a href="{{ route('contacts.create') }}">Add New</a></li>
                                 </ul>
                             </li>

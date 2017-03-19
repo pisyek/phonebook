@@ -1,7 +1,10 @@
-@if( isset($message) )
+@if( session('message') )
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
-        <div class="alert alert-success" role="alert">{{ $message }}</div>
+        <div class="alert alert-success alert-dismissable" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ session('message') }}
+        </div>
     </div>
 </div>
 @endif

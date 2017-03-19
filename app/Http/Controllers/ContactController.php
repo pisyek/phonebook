@@ -34,6 +34,10 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        \App\Contact::create([
+            'name' => $request->input('name'),
+            'phone_no' => $request->input('phone_no'),
+        ]);
         return back()->with('message', 'New contact added!');
     }
 
