@@ -17,10 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-Route::get('contacts', 'ContactController@index')->name('contacts.index');
-Route::get('contacts/create', 'ContactController@create')->name('contacts.create');
-Route::post('contacts', 'ContactController@store')->name('contacts.store');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'HomeController@index');
+    Route::get('contacts', 'ContactController@index')->name('contacts.index');
+    Route::get('contacts/create', 'ContactController@create')->name('contacts.create');
+    Route::post('contacts', 'ContactController@store')->name('contacts.store');
+
+});
 
 Route::group(['prefix' => 'datatables'], function () {
     Route::get('contacts', 'DatatablesController@getContacts');
