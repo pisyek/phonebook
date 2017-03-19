@@ -21,7 +21,7 @@
                             <label for="name">Phone Number</label>
                             <input type="text" class="form-control" name="phone_no" placeholder="Eg. 012-345 7685" value="{{ $contact->phone_no }}">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
