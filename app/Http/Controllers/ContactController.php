@@ -60,7 +60,7 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('contact-edit', ['contact' => \App\Contact::findOrFail($id)]);
     }
 
     /**

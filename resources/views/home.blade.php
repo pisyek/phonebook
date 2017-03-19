@@ -36,10 +36,7 @@ $('#contacts-table').DataTable( {
     columns: [
         { data: 'name' },
         { data: 'phone_no' },
-        { 
-            data: 'null',
-            defaultContent: '<a class="btn btn-primary btn-xs">Edit</a> | <a class="btn btn-danger btn-xs">Delete</a>'
-        }
+        { data: 'action' }
     ]
 } );
 </script>
