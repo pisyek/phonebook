@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('contacts', 'ContactController@store')->name('contacts.store');
     Route::get('contacts/{id}/edit', 'ContactController@edit')->name('contacts.edit');
     Route::put('contacts/{id}', 'ContactController@update')->name('contacts.update');
+    Route::delete('contacts/{id}', 'ContactController@destroy')->name('contacts.destroy');
 
 });
 

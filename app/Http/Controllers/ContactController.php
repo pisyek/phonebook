@@ -93,6 +93,7 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Contact::destroy($id);
+        return back()->with('message', 'Deleted successfully!');
     }
 }
