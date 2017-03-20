@@ -11,8 +11,10 @@
                 <div class="panel-heading">Dashboard > Contacts > Edit - {{ $contact->name }}</div>
 
                 <div class="panel-body">
-                    <form action="{{ route('contacts.store') }}" method="POST">
+                    <form action="{{ route('contacts.update', ['id' => $contact->id]) }}" method="POST">
                     {{ csrf_field() }}
+                    {{ method_field('PUT') }}
+
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" name="name" placeholder="Eg. Ali" value="{{ $contact->name }}">

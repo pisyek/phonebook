@@ -72,7 +72,17 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'bail|required',
+            'phone_no' => 'bail|required|unique:contacts,id,'.$id
+        ]);
+
+        \App\Contact::find($id)->update([
+            'name' => $request->input('name'),
+            'phone_no' => $request->input('phone_no')
+        ]);
+
+        return back()->with('message', 'Updated successfully!');
     }
 
     /**
