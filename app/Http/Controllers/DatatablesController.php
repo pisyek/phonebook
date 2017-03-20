@@ -22,8 +22,7 @@ class DatatablesController extends Controller
                     <button type="submit" class="btn btn-danger btn-xs">
                     <span class="glyphicon glyphicon-trash"></span> 
                     Delete</button>
-                </form>'
-                ;
+                </form>';
         }
         return $contacts;
     }
