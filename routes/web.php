@@ -28,6 +28,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-Route::group(['prefix' => 'datatables'], function () {
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'datatables'
+    ], function () {
     Route::get('contacts', 'DatatablesController@getContacts');
 });
