@@ -14,6 +14,7 @@
                     <table id="contacts-table" class="table table-striped table-hover">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Name</th>
                                 <th>Phone Number</th>
                                 <th>Action</th>
@@ -31,16 +32,26 @@
 
 @section('js')
 <script>
-$('#contacts-table').DataTable( {
-    ajax: {
-        url: 'datatables/contacts',
-        dataSrc: ''
-    },
-    columns: [
-        { data: 'name' },
-        { data: 'phone_no' },
-        { data: 'action' }
-    ]
-} );
+$(document).ready(function() {
+    var t = $('#contacts-table').DataTable({
+        ajax: {
+            url: 'datatables/contacts',
+            dataSrc: ''
+        },
+        columns: [
+            { data: null, orderable: false},
+            { data: 'name' },
+            { data: 'phone_no' },
+            { data: 'action' }
+        ],
+        "order": [[ 1, 'asc' ]]
+    });
+
+    t.on( 'order.dt search.dt', function () {
+        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
+});
 </script>
 @endsection
