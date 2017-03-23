@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('contacts/{id}', 'ContactController@destroy')->name('contacts.destroy');
 
     Route::get('edit-password', 'Auth\EditPasswordController@index')->name('password.edit');
-    Route::get('update-password', 'Auth\UpdatePasswordController@index')->name('password.update');
+    Route::put('update-password', 'Auth\UpdatePasswordController@index')->name('password.update');
 
 });
 
