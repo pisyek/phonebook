@@ -26,7 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('contacts/{id}', 'ContactController@update')->name('contacts.update');
     Route::delete('contacts/{id}', 'ContactController@destroy')->name('contacts.destroy');
 
-    Route::get('edit-password', 'EditPasswordController@index')->name('password.edit');
+    Route::get('edit-password', 'Auth\EditPasswordController@index')->name('password.edit');
     Route::get('update-password', 'UpdatePasswordController@index')->name('password.update');
 
 });
