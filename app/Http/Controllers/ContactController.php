@@ -34,6 +34,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'bail|required',
+            'phone_no' => 'bail|required|unique:contacts,id,'.$id
+        ]);
+        
         \App\Contact::create([
             'name' => $request->input('name'),
             'phone_no' => $request->input('phone_no'),
