@@ -36,9 +36,9 @@ class ContactController extends Controller
     {
         $this->validate($request, [
             'name' => 'bail|required',
-            'phone_no' => 'bail|required|unique:contacts,id,'.$id
+            'phone_no' => 'bail|required|unique:contacts'
         ]);
-        
+
         \App\Contact::create([
             'name' => $request->input('name'),
             'phone_no' => $request->input('phone_no'),
